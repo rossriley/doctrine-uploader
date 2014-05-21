@@ -10,13 +10,13 @@ class Listener {
     public $targets;
 
     /**
-     * Constructor function
+     * Constructor function 
      *
      * @param Filesystem
      * @param $targets - an array keyed on Entity name, eg: My\Entity=>[field1,field2]
      **/
 
-    public function __construct(Filesystem $fs, $targets = []) {
+    public function __construct(Handler $fs, $targets = []) {
         $this->fs = $fs;
         $this->targets = $targets;
     }
