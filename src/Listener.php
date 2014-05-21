@@ -1,8 +1,6 @@
 <?php
 namespace Doctrine\Uploader;
 
-use Sirius\Upload\Handler;
-
 
 class Listener {
 
