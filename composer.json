@@ -1,0 +1,26 @@
+{
+    "name": "rossriley/doctrine-uploader",
+    "description": "Small package to handle file uploads via a save to a Flysystem Handler",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ross Riley",
+            "email": "riley.ross@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "doctrine/orm": "2.5.*@dev",
+        "league/flysystem": "0.4.*@dev",
+        "siriusphp/upload": "~1.2"
+           
+    },
+    
+    "autoload": {
+        "psr-4": {
+            "Doctrine\\Uploader": "src",
+            "Doctrine\\Uploader\\Tests\\": "tests"
+        }
+    }
+    
+}
