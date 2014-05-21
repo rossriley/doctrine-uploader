@@ -1,5 +1,5 @@
 <?php
-namespace Doctrine\Uploder;
+namespace Doctrine\Uploader;
 
 use Sirius\Upload\Handler as SiriusHandler;
 use League\Flysystem\Filesystem;
