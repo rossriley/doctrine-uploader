@@ -10,7 +10,7 @@ class Listener {
     public $targets;
 
     /**
-     * Constructor function 
+     * Constructor function
      *
      * @param Filesystem
      * @param $targets - an array keyed on Entity name, eg: My\Entity=>[field1,field2]
