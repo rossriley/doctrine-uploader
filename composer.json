@@ -18,7 +18,7 @@
     
     "autoload": {
         "psr-4": {
-            "Doctrine\\Uploader": "src",
+            "Doctrine\\Uploader\\": "src",
             "Doctrine\\Uploader\\Tests\\": "tests"
         }
     }

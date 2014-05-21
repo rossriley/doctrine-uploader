@@ -1,10 +1,11 @@
 <?php
-
 namespace Doctrine\Uploder;
-use Sirius\Upload\Handler;
-use League\Flysystem\Filesystem;
 
-class Handler extends SiriusHandler;
+use Sirius\Upload\Handler as SiriusHandler;
+use League\Flysystem\Filesystem;
+use Sirius\Upload\UploadHandlerInterface;
+
+class Handler extends SiriusHandler implements UploadHandlerInterface
 {
     
     
