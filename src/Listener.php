@@ -46,8 +46,6 @@ class Listener {
 
     public function upload($entity, $field) {
         $raw = $entity->$field;
-        $this->fs->setOverwrite(false);
-        $this->fs->setPrefix($entity->account."/");
         $result = $this->fs->process($raw);
         if($result->isValid()) {
             return $result->name;
