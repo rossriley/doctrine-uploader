@@ -17,7 +17,8 @@ $targets = [
 ```
 
 ##### Provide a filesystem handler
-This project uses siriusphp/upload to handle uploads and Flysystem(http://flysystem.thephpleague.com) to handle saves. The simplest usage is as follows.
+
+This project uses Flysystem(http://flysystem.thephpleague.com) to handle saves. The simplest usage is as follows.
 
 ```
 $fsAdapter = new League\Flysystem\Adapter\Local('/path/to/save');
