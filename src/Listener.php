@@ -30,16 +30,6 @@ class Listener {
             }
         }
 
-        if ($entity instanceof Entity\Dealer && is_array($entity->logo)) {
-            $entity->logo = $this->upload($entity, "logo");
-        }
-        
-        if ($entity instanceof Entity\Dealer && is_array($entity->image)) {
-            $entity->image = $this->upload($entity, "image");
-        }
-
-
-
     }
 
     public function upload($entity, $field) {
