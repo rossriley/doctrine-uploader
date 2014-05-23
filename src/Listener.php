@@ -19,7 +19,7 @@ class Listener {
         $this->targets = $targets;
     }
 
-    public function preUpdate($args) {
+    public function prePersist($args) {
         $entity = $args->getObject();
         $entityManager = $args->getObjectManager();
         
@@ -34,6 +34,7 @@ class Listener {
 
     public function upload($entity, $field) {
         $raw = $entity->$field;
+        if(null === $raw) return;
         $result = $this->fs->process($raw);
         if($result->isValid()) {
             return $result->name;
