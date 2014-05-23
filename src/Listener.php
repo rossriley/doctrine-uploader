@@ -19,17 +19,25 @@ class Listener {
         $this->targets = $targets;
     }
 
-    public function prePersist($args) {
+   public function prePersist($args) {
+        $this->tryUpload($args);
+    }
+    
+    public function preUpdate($args) {
+        $this->tryUpload($args);
+    }
+    
+    public function tryUpload($args)
+    {
         $entity = $args->getObject();
         $entityManager = $args->getObjectManager();
         
         if(array_key_exists(get_class($entity), $this->targets)) {
             $fields = $this->targets[get_class($entity)];
             foreach($fields as $field) {
-                $this->upload($entity, $field);
+                $entity->$field = $this->upload($entity, $field);
             }
         }
-
     }
 
     public function upload($entity, $field) {
